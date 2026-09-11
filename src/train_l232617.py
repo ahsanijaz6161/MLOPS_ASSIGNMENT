@@ -1,6 +1,7 @@
 import pandas as pd
 import joblib
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression , LogisticRegression
+
 
 # Load dataset
 data = pd.read_csv("data/Housing.csv")
@@ -13,7 +14,8 @@ X = data[["area", "bedrooms", "bathrooms", "stories", "parking"]]
 y = data["price"]
 
 # Train model
-model = LinearRegression()
+model = LogisticRegression
+#model = LinearRegression()
 
 model.fit(X, y)
 
