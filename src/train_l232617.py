@@ -11,9 +11,9 @@ print(data)
 
 # Features and target
 X = data[["area", "bedrooms", "bathrooms", "stories", "parking"]]
-X = X / X.max()
+
 y = data["price"]
-X = (X - X.mean()) / X.std()
+X = X / X.max()
 
 # Train model
 model = LogisticRegression
