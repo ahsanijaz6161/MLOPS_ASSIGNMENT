@@ -11,6 +11,7 @@ print(data)
 
 # Features and target
 X = data[["area", "bedrooms", "bathrooms", "stories", "parking"]]
+X = X / X.max()
 y = data["price"]
 
 # Train model
